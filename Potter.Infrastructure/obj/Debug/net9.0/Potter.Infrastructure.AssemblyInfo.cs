@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Potter.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13f262b09bb8a27f9c287174a187d22f6de89879")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d3a6c6b9f83dff598fcac2e6778cfe578d5c3d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Potter.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Potter.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
