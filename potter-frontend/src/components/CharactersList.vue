@@ -1,45 +1,76 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 
-// Estado para armazenar os personagens e a busca
+// State to store characters and search query
 const characters = ref([]);
 const searchQuery = ref('');
 
-// Função para buscar os personagens do backend
+// State to store the random character
+const randomCharacter = ref(null);
+const isModalOpen = ref(false); // Modal state
+
+// Function to fetch all characters
 const fetchCharacters = async () => {
   try {
     const response = await fetch('http://localhost:5297/api/data/characters');
     characters.value = await response.json();
   } catch (error) {
-    console.error('Erro ao buscar personagens:', error);
+    console.error('Error fetching characters:', error);
   }
 };
 
-// Filtrar personagens dinamicamente
+// Function to fetch a random character and open the modal
+const fetchRandomCharacter = async () => {
+  try {
+    const response = await fetch('http://localhost:5297/api/data/random');
+    randomCharacter.value = await response.json();
+    isModalOpen.value = true; // Open modal
+  } catch (error) {
+    console.error('Error fetching random character:', error);
+  }
+};
+
+// Filter characters dynamically
 const filteredCharacters = computed(() =>
   characters.value.filter(c => c.fullName.toLowerCase().includes(searchQuery.value.toLowerCase()))
 );
 
-// Chama a função ao montar o componente
+// Fetch characters on component mount
 onMounted(fetchCharacters);
 </script>
 
 <template>
   <div class="container">
-    <h1>⚡ Lista de Personagens de Harry Potter ⚡</h1>
+    <h1>⚡ List of Characters from Harry Potter ⚡</h1>
 
-    <!-- Campo de busca -->
-    <input v-model="searchQuery" placeholder="🔍 Buscar personagem..." class="search-box" />
+    <!-- Search field -->
+    <input v-model="searchQuery" placeholder="🔍 Search a character..." class="search-box" />
+
+    <!-- Random character button -->
+    <button @click="fetchRandomCharacter" class="random-button">🎲 Try Your Luck</button>
+
+    <!-- Random Character Modal -->
+    <div v-if="isModalOpen" class="modal">
+      <div class="modal-content">
+        <button class="close-button" @click="isModalOpen = false">✖</button>
+        <h2>🎭 Random Character!</h2>
+        <img :src="randomCharacter.image" :alt="randomCharacter.fullName" class="character-img-large" />
+        <p><strong>Name:</strong> {{ randomCharacter.fullName }}</p>
+        <p><strong>House:</strong> {{ randomCharacter.hogwartsHouse || 'Unknown' }}</p>
+        <p><strong>Actor:</strong> {{ randomCharacter.interpretedBy || 'Unknown' }}</p>
+        <p><strong>Birthdate:</strong> {{ randomCharacter.birthdate || 'Unknown' }}</p>
+      </div>
+    </div>
 
     <div class="table-container">
       <table>
         <thead>
           <tr>
-            <th>Imagem</th>
-            <th>Nome</th>
-            <th>Casa</th>
-            <th>Ator</th>
-            <th>Nascimento</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>House</th>
+            <th>Actor</th>
+            <th>Birthdate</th>
           </tr>
         </thead>
         <tbody>
@@ -47,7 +78,7 @@ onMounted(fetchCharacters);
             <td><img :src="character.image" :alt="character.fullName" class="character-img" /></td>
             <td>{{ character.fullName }}</td>
             <td>{{ character.hogwartsHouse }}</td>
-            <td>{{ character.interpretedBy || 'Desconhecido' }}</td>
+            <td>{{ character.interpretedBy || 'Unknown' }}</td>
             <td>{{ character.birthdate }}</td>
           </tr>
         </tbody>
@@ -57,7 +88,7 @@ onMounted(fetchCharacters);
 </template>
 
 <style scoped>
-/* Estilização Geral */
+/* General Styling */
 .container {
   font-family: 'Raleway', sans-serif;
   text-align: center;
@@ -66,13 +97,13 @@ onMounted(fetchCharacters);
   color: #f5f5f5;
 }
 
-/* Título */
+/* Title */
 h1 {
   font-size: 24px;
   margin-bottom: 15px;
 }
 
-/* Campo de Busca */
+/* Search Box */
 .search-box {
   padding: 8px;
   width: 80%;
@@ -85,7 +116,66 @@ h1 {
   color: white;
 }
 
-/* Tabela */
+/* Random Button */
+.random-button {
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.random-button:hover {
+  background-color: #ffcc00;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Modal Image */
+.character-img-large {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Table */
 .table-container {
   overflow-x: auto;
 }
@@ -107,12 +197,12 @@ th {
   color: #ffd700;
 }
 
-/* Efeito Hover */
+/* Hover Effect */
 tr:hover {
   background-color: #333;
 }
 
-/* Imagem */
+/* Table Image */
 .character-img {
   width: 50px;
   height: 50px;
