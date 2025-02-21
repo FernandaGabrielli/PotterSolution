@@ -9,24 +9,25 @@ var builder = Host.CreateDefaultBuilder(args);
 
 builder.ConfigureServices((hostContext, services) =>
 {
-    // Configuração do Hangfire usando armazenamento em memória
+    // Configuring Hangfire to use in-memory storage
     services.AddHangfire(config => config.UseMemoryStorage());
     services.AddHangfireServer();
 
-    // Adicionando HttpClient e o DataUpdater ao DI
+    // Adding HttpClient and the DataUpdater to Dependency Injection (DI)
     services.AddHttpClient<DataUpdater>();
     services.AddTransient<DataUpdater>();
 
-    // Registrando o Worker
+    // Registering the Worker as a hosted service
     services.AddHostedService<Worker>();
 });
 
 var app = builder.Build();
 
-// Configuração do Job Recorrente
+// Configuring the Recurring Job
 using (var scope = app.Services.CreateScope())
 {
     var jobManager = scope.ServiceProvider.GetRequiredService<IRecurringJobManager>();
+    // Adding or updating the recurring job to update characters every hour
     jobManager.AddOrUpdate<DataUpdater>(
         "update-characters", 
         x => x.UpdateCharacters(), 

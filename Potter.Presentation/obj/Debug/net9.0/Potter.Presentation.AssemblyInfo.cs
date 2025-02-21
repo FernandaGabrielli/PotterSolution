@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Potter.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d3a6c6b9f83dff598fcac2e6778cfe578d5c3d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3490f3250159d5e157153e4bb0a30ac9c6ea8913")]
 [assembly: System.Reflection.AssemblyProductAttribute("Potter.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Potter.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
