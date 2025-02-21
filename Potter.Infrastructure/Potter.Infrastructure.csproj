@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Potter.Application\Potter.Application.csproj" />
+    <ProjectReference Include="..\Potter.Domain\Potter.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

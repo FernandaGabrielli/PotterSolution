@@ -150,6 +150,9 @@
             "projectReferences": {
               "C:\\Users\\nanda\\PotterSolution\\Potter.Application\\Potter.Application.csproj": {
                 "projectPath": "C:\\Users\\nanda\\PotterSolution\\Potter.Application\\Potter.Application.csproj"
+              },
+              "C:\\Users\\nanda\\PotterSolution\\Potter.Domain\\Potter.Domain.csproj": {
+                "projectPath": "C:\\Users\\nanda\\PotterSolution\\Potter.Domain\\Potter.Domain.csproj"
               }
             }
           }
@@ -249,6 +252,18 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.8.18, )"
+            },
+            "Hangfire.MemoryStorage": {
+              "target": "Package",
+              "version": "[1.8.1.1, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.8.18, )"
+            },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[9.0.2, )"

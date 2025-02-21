@@ -4710,7 +4710,8 @@
       "Microsoft.EntityFrameworkCore >= 9.0.2",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.2",
-      "Potter.Application >= 1.0.0"
+      "Potter.Application >= 1.0.0",
+      "Potter.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4740,6 +4741,9 @@
           "projectReferences": {
             "C:\\Users\\nanda\\PotterSolution\\Potter.Application\\Potter.Application.csproj": {
               "projectPath": "C:\\Users\\nanda\\PotterSolution\\Potter.Application\\Potter.Application.csproj"
+            },
+            "C:\\Users\\nanda\\PotterSolution\\Potter.Domain\\Potter.Domain.csproj": {
+              "projectPath": "C:\\Users\\nanda\\PotterSolution\\Potter.Domain\\Potter.Domain.csproj"
             }
           }
         }

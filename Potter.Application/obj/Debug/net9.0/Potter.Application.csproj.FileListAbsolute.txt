@@ -1,0 +1,16 @@
+C:\Users\nanda\PotterSolution\Potter.Application\bin\Debug\net9.0\Potter.Application.deps.json
+C:\Users\nanda\PotterSolution\Potter.Application\bin\Debug\net9.0\Potter.Application.dll
+C:\Users\nanda\PotterSolution\Potter.Application\bin\Debug\net9.0\Potter.Application.pdb
+C:\Users\nanda\PotterSolution\Potter.Application\bin\Debug\net9.0\Potter.Domain.dll
+C:\Users\nanda\PotterSolution\Potter.Application\bin\Debug\net9.0\Potter.Domain.pdb
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\Potter.Application.csproj.AssemblyReference.cache
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\Potter.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\Potter.Application.AssemblyInfoInputs.cache
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\Potter.Application.AssemblyInfo.cs
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\Potter.Application.csproj.CoreCompileInputs.cache
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\Potter.Application.sourcelink.json
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\Potter.A.F2DE845F.Up2Date
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\Potter.Application.dll
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\refint\Potter.Application.dll
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\Potter.Application.pdb
+C:\Users\nanda\PotterSolution\Potter.Application\obj\Debug\net9.0\ref\Potter.Application.dll

@@ -150,6 +150,9 @@
             "projectReferences": {
               "C:\\Users\\nanda\\PotterSolution\\Potter.Application\\Potter.Application.csproj": {
                 "projectPath": "C:\\Users\\nanda\\PotterSolution\\Potter.Application\\Potter.Application.csproj"
+              },
+              "C:\\Users\\nanda\\PotterSolution\\Potter.Domain\\Potter.Domain.csproj": {
+                "projectPath": "C:\\Users\\nanda\\PotterSolution\\Potter.Domain\\Potter.Domain.csproj"
               }
             }
           }

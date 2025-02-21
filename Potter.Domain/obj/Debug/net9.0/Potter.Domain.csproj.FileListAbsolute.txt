@@ -1,0 +1,12 @@
+C:\Users\nanda\PotterSolution\Potter.Domain\bin\Debug\net9.0\Potter.Domain.deps.json
+C:\Users\nanda\PotterSolution\Potter.Domain\bin\Debug\net9.0\Potter.Domain.dll
+C:\Users\nanda\PotterSolution\Potter.Domain\bin\Debug\net9.0\Potter.Domain.pdb
+C:\Users\nanda\PotterSolution\Potter.Domain\obj\Debug\net9.0\Potter.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nanda\PotterSolution\Potter.Domain\obj\Debug\net9.0\Potter.Domain.AssemblyInfoInputs.cache
+C:\Users\nanda\PotterSolution\Potter.Domain\obj\Debug\net9.0\Potter.Domain.AssemblyInfo.cs
+C:\Users\nanda\PotterSolution\Potter.Domain\obj\Debug\net9.0\Potter.Domain.csproj.CoreCompileInputs.cache
+C:\Users\nanda\PotterSolution\Potter.Domain\obj\Debug\net9.0\Potter.Domain.sourcelink.json
+C:\Users\nanda\PotterSolution\Potter.Domain\obj\Debug\net9.0\Potter.Domain.dll
+C:\Users\nanda\PotterSolution\Potter.Domain\obj\Debug\net9.0\refint\Potter.Domain.dll
+C:\Users\nanda\PotterSolution\Potter.Domain\obj\Debug\net9.0\Potter.Domain.pdb
+C:\Users\nanda\PotterSolution\Potter.Domain\obj\Debug\net9.0\ref\Potter.Domain.dll
